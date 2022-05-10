@@ -1,0 +1,8 @@
+.block{
+  height: 540px;
+  width: 900px;
+  margin-left: 30px;
+  background-color: azure;
+  justify-content: center;
+  justify-items: center;
+}

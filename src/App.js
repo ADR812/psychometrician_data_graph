@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './Components/SearchBar';
+import Data from "../src/TestTASK2.json"
+import Graph from "../src/Components/Graph"
+import { useState } from 'react';
 
 function App() {
+  const [curr, setcurr] = useState(Data[0]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar Placeholder="enter name" data={Data} setcurr = {setcurr}/>
+      <div className='graph_box'>
+      <Graph data = {curr}/>
+      </div>
     </div>
   );
 }
